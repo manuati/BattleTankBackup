@@ -1,0 +1,5 @@
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\Definitions.BattleTank.h
+D:\EPIC Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\EPIC Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Source\BattleTank/Projectile.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank\Projectile.generated.h

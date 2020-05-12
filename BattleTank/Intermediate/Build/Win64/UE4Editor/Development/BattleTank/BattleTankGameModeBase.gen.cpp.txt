@@ -1,0 +1,9 @@
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\Definitions.BattleTank.h
+D:\EPIC Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\EPIC Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Source\BattleTank/BattleTankGameModeBase.h
+D:\EPIC Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+D:\EPIC Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+D:\EPIC Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+D:\EPIC Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank\BattleTankGameModeBase.generated.h

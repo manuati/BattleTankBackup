@@ -1,0 +1,11 @@
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\Definitions.BattleTank.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Source\BattleTank\TankMovementComponent.h
+D:\EPIC Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
+D:\EPIC Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
+D:\EPIC Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PathFollowingAgentInterface.generated.h
+D:\EPIC Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+D:\EPIC Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+D:\EPIC Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavMovementComponent.generated.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank\TankMovementComponent.generated.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Source\BattleTank\TankTrack.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank\TankTrack.generated.h

@@ -1,0 +1,5 @@
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\Definitions.BattleTank.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Source\BattleTank\TankPlayerController.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank\TankPlayerController.generated.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Source\BattleTank\TankAimingComponent.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank\TankAimingComponent.generated.h
