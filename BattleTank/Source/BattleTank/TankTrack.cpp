@@ -5,14 +5,20 @@
 
 void UTankTrack::SetThrottle(float Throttle)
 {
-    // auto Name = GetName();
-    // UE_LOG(LogTemp, Warning, TEXT("%s throttle: %f"), Name, Throttle);
-
-    // TODO Clamp actual throttle value so player can't over-drive
     auto ForceApplied = GetForwardVector() * Throttle * TrackMaxDrivingForce;
     auto ForceLocation = GetComponentLocation();
     auto TankRoot = Cast<UPrimitiveComponent>(GetOwner() -> GetRootComponent());
-    // UE_LOG(LogTemp, Warning, TEXT("Throttle: %f, TrackMaxDrivingForce: %f"), Throttle, TrackMaxDrivingForce);
-    // UE_LOG(LogTemp, Warning, TEXT("Force applied: %s"), *ForceApplied.ToString());
+    
     TankRoot->AddForceAtLocation(ForceApplied, ForceLocation);
+}
+
+void UTankTrack::Tick(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction)
+{
+    auto SlippageSpeed = FVector::DotProduct(GetRightVector(), GetComponentVelocity());
+
+    auto CorrectionAcceleration = -SlippageSpeed / DeltaTime * GetRightVector();
+
+    auto TankRoot = Cast<UStaticMeshComponent>(GetOwner()->GetRootComponent());
+    auto CorrectionForce = (TankRoot->GetMass()*CorrectionAcceleration) / 2;
+    TankRoot->AddForce(CorrectionForce);
 }

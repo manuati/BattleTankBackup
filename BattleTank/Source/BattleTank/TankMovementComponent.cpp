@@ -4,6 +4,13 @@
 #include "TankMovementComponent.h"
 #include "TankTrack.h"
 
+UTankMovementComponent::UTankMovementComponent()
+{
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+	PrimaryComponentTick.bCanEverTick = true;
+}
+
 void UTankMovementComponent::IntendMoveForward(float Throw)
 {
     if (!ensure(LeftTrack && RightTrack)) { return; }
@@ -36,4 +43,10 @@ void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool
 
     auto RightThrow = FVector::CrossProduct(TankForward, AIForwardIntention).Z;
     IntendTurnRight(RightThrow);
+}
+
+void UTankMovementComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) 
+{	
+	LeftTrack->Tick(DeltaTime, TickType, ThisTickFunction);
+    RightTrack->Tick(DeltaTime, TickType, ThisTickFunction);
 }
