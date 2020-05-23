@@ -26,6 +26,9 @@ void ATankAIController::Tick(float DeltaTime)
     // Aim towards the player
     MyAimingComponent->AimAt(PlayerTank->GetActorLocation());    
     // Fire if ready
-    // MyAimingComponent->Fire(); //TODO Fix fire
-    
+    // If aim or locked
+    if (MyAimingComponent->GetFiringState() == EFiringState::Lock) {
+        // MyAimingComponent->Fire(); //TODO Fix fire; se le esta llendo el componente seteado en el blueprint
+        UE_LOG(LogTemp, Warning, TEXT("AI Fire!"));
+    }
 }

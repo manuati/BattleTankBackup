@@ -41,6 +41,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "TankAction")
 	void Fire();
+
+	EFiringState GetFiringState() const;
 	
 private:
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
