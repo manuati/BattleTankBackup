@@ -5,15 +5,20 @@
 
 void UTankTrack::SetThrottle(float Throttle)
 {
-    auto ForceApplied = GetForwardVector() * Throttle * TrackMaxDrivingForce;
+    CurrentThrottle = FMath::Clamp<float>(CurrentThrottle + Throttle, -1, 1);
+}
+
+void UTankTrack::DriveTrack()
+{
+    auto ForceApplied = GetForwardVector() * CurrentThrottle * TrackMaxDrivingForce;
     auto ForceLocation = GetComponentLocation();
     auto TankRoot = Cast<UPrimitiveComponent>(GetOwner() -> GetRootComponent());
     
     TankRoot->AddForceAtLocation(ForceApplied, ForceLocation);
 }
 
-void UTankTrack::Tick(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction)
-{
+void UTankTrack::ApplySidewaysForce() {
+    auto DeltaTime = GetWorld()->GetDeltaSeconds();
     auto SlippageSpeed = FVector::DotProduct(GetRightVector(), GetComponentVelocity());
 
     auto CorrectionAcceleration = -SlippageSpeed / DeltaTime * GetRightVector();
@@ -29,5 +34,8 @@ void UTankTrack::BeginPlay() {
 }
 
 void UTankTrack::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit) {
-    UE_LOG(LogTemp, Warning, TEXT("Track got On Hit"));
+    // UE_LOG(LogTemp, Warning, TEXT("Track got On Hit"));
+    DriveTrack();
+    ApplySidewaysForce();
+    CurrentThrottle = 0;
 }
