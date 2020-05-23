@@ -33,7 +33,11 @@ void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 {	
 	bool isReloaded = (FPlatformTime::Seconds() - LastFireTime) < ReloadTimeInSeconds;
 
-	if(isReloaded)
+	if (RoundsLeft<=0)
+	{
+		FiringState = EFiringState::OutOfAmmo;
+	} 
+	else if(isReloaded)
 	{
 		FiringState = EFiringState::Reloading;
 	} 
@@ -129,7 +133,7 @@ void UTankAimingComponent::MoveTurretTowards(FVector AimDirection)
 void UTankAimingComponent::Fire()
 {	
 
-	if (FiringState != EFiringState::Reloading)
+	if (FiringState == EFiringState::Lock || FiringState == EFiringState::Aiming )
 	{
 		if (!ensure(Barrel)) { return; }
 		if (!ensure(ProjectileBlueprint)) { return; }
@@ -143,10 +147,16 @@ void UTankAimingComponent::Fire()
 
 		Projectile->LaunchProjectile(LaunchSpeed);
 		LastFireTime = FPlatformTime::Seconds();
+		RoundsLeft = RoundsLeft - 1;
 	}
 }
 
 EFiringState UTankAimingComponent::GetFiringState() const 
 {
 	return FiringState;
+}
+
+int UTankAimingComponent::GetRoundsLeft() const
+{
+	return RoundsLeft;
 }
