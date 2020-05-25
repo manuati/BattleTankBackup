@@ -49,7 +49,7 @@ public:
 	int GetRoundsLeft() const;
 	
 private:
-	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float ReloadTimeInSeconds = 3;
 	double LastFireTime = 0;
 	
@@ -58,6 +58,9 @@ private:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float LaunchSpeed = 4000;
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
+	int RoundsLeft = 3;
+
 
 	UTankBarrel* Barrel = nullptr;
 	UTankTurret* Turret = nullptr;
@@ -69,5 +72,5 @@ private:
 	bool IsBarrelMoving();
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
 
-	int RoundsLeft = 3;
+	
 };
