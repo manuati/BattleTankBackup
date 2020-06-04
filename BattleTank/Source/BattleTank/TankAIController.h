@@ -24,6 +24,11 @@ class BATTLETANK_API ATankAIController : public AAIController
 		// Called every frame
 		virtual void Tick(float DeltaTime) override;
 
+		virtual void SetPawn(APawn* InPawn) override;
+
+		UFUNCTION()
+		void OnPossesedTankDeath();
+
 	public:
 		// How close can the AI tank get
 		UPROPERTY(EditDefaultsOnly, Category="Setup")

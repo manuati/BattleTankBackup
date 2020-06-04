@@ -62,7 +62,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AProjectile); \
 	FORCEINLINE static uint32 __PPO__LaunchBlast() { return STRUCT_OFFSET(AProjectile, LaunchBlast); } \
 	FORCEINLINE static uint32 __PPO__ImpactBlast() { return STRUCT_OFFSET(AProjectile, ImpactBlast); } \
 	FORCEINLINE static uint32 __PPO__ExplosionForce() { return STRUCT_OFFSET(AProjectile, ExplosionForce); } \
-	FORCEINLINE static uint32 __PPO__DestroyDelay() { return STRUCT_OFFSET(AProjectile, DestroyDelay); }
+	FORCEINLINE static uint32 __PPO__DestroyDelay() { return STRUCT_OFFSET(AProjectile, DestroyDelay); } \
+	FORCEINLINE static uint32 __PPO__ProjectileDamage() { return STRUCT_OFFSET(AProjectile, ProjectileDamage); }
 
 
 #define BattleTank_Source_BattleTank_Projectile_h_14_PROLOG

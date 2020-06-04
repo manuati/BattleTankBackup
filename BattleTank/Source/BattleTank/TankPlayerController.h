@@ -29,6 +29,9 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 		float LineTraceRange = 1000000;
 		
 	private:
+		UFUNCTION()
+		void OnPossesedTankDeath();
+		virtual void SetPawn(APawn* InPawn) override;
 
 		void AimTowardsCrosshair();
 		bool GetSightRayHitLocation(FVector& HitLocation) const;
@@ -39,5 +42,7 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 		float CrossHairXLocation = 0.5f;
 		UPROPERTY(EditDefaultsOnly)
 		float CrossHairYLocation = 0.33333f;
+
+		
 		
 };
