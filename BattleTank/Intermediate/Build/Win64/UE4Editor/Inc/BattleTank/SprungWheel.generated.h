@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BATTLETANK_SprungWheel_generated_h
 
-#define BattleTank_Source_BattleTank_SprungWheel_h_15_RPC_WRAPPERS
-#define BattleTank_Source_BattleTank_SprungWheel_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define BattleTank_Source_BattleTank_SprungWheel_h_15_INCLASS_NO_PURE_DECLS \
+#define BattleTank_Source_BattleTank_SprungWheel_h_16_RPC_WRAPPERS
+#define BattleTank_Source_BattleTank_SprungWheel_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define BattleTank_Source_BattleTank_SprungWheel_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASprungWheel(); \
 	friend struct Z_Construct_UClass_ASprungWheel_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(ASprungWheel)
 
 
-#define BattleTank_Source_BattleTank_SprungWheel_h_15_INCLASS \
+#define BattleTank_Source_BattleTank_SprungWheel_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesASprungWheel(); \
 	friend struct Z_Construct_UClass_ASprungWheel_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(ASprungWheel)
 
 
-#define BattleTank_Source_BattleTank_SprungWheel_h_15_STANDARD_CONSTRUCTORS \
+#define BattleTank_Source_BattleTank_SprungWheel_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASprungWheel(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASprungWheel) \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define BattleTank_Source_BattleTank_SprungWheel_h_15_ENHANCED_CONSTRUCTORS \
+#define BattleTank_Source_BattleTank_SprungWheel_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASprungWheel(ASprungWheel&&); \
@@ -57,30 +57,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASprungWheel); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASprungWheel)
 
 
-#define BattleTank_Source_BattleTank_SprungWheel_h_15_PRIVATE_PROPERTY_OFFSET \
+#define BattleTank_Source_BattleTank_SprungWheel_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Wheel() { return STRUCT_OFFSET(ASprungWheel, Wheel); } \
-	FORCEINLINE static uint32 __PPO__MassWheelConstraint() { return STRUCT_OFFSET(ASprungWheel, MassWheelConstraint); }
+	FORCEINLINE static uint32 __PPO__Axle() { return STRUCT_OFFSET(ASprungWheel, Axle); } \
+	FORCEINLINE static uint32 __PPO__MassWheelConstraint() { return STRUCT_OFFSET(ASprungWheel, MassWheelConstraint); } \
+	FORCEINLINE static uint32 __PPO__AxleWheelConstraint() { return STRUCT_OFFSET(ASprungWheel, AxleWheelConstraint); }
 
 
-#define BattleTank_Source_BattleTank_SprungWheel_h_12_PROLOG
-#define BattleTank_Source_BattleTank_SprungWheel_h_15_GENERATED_BODY_LEGACY \
+#define BattleTank_Source_BattleTank_SprungWheel_h_13_PROLOG
+#define BattleTank_Source_BattleTank_SprungWheel_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BattleTank_Source_BattleTank_SprungWheel_h_15_PRIVATE_PROPERTY_OFFSET \
-	BattleTank_Source_BattleTank_SprungWheel_h_15_RPC_WRAPPERS \
-	BattleTank_Source_BattleTank_SprungWheel_h_15_INCLASS \
-	BattleTank_Source_BattleTank_SprungWheel_h_15_STANDARD_CONSTRUCTORS \
+	BattleTank_Source_BattleTank_SprungWheel_h_16_PRIVATE_PROPERTY_OFFSET \
+	BattleTank_Source_BattleTank_SprungWheel_h_16_RPC_WRAPPERS \
+	BattleTank_Source_BattleTank_SprungWheel_h_16_INCLASS \
+	BattleTank_Source_BattleTank_SprungWheel_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define BattleTank_Source_BattleTank_SprungWheel_h_15_GENERATED_BODY \
+#define BattleTank_Source_BattleTank_SprungWheel_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BattleTank_Source_BattleTank_SprungWheel_h_15_PRIVATE_PROPERTY_OFFSET \
-	BattleTank_Source_BattleTank_SprungWheel_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	BattleTank_Source_BattleTank_SprungWheel_h_15_INCLASS_NO_PURE_DECLS \
-	BattleTank_Source_BattleTank_SprungWheel_h_15_ENHANCED_CONSTRUCTORS \
+	BattleTank_Source_BattleTank_SprungWheel_h_16_PRIVATE_PROPERTY_OFFSET \
+	BattleTank_Source_BattleTank_SprungWheel_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	BattleTank_Source_BattleTank_SprungWheel_h_16_INCLASS_NO_PURE_DECLS \
+	BattleTank_Source_BattleTank_SprungWheel_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

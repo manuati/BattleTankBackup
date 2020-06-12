@@ -34,9 +34,17 @@ void EmptyLinkFunctionForGeneratedCodeSprungWheel() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AxleWheelConstraint_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AxleWheelConstraint;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MassWheelConstraint_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MassWheelConstraint;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Axle_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Axle;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Wheel_MetaData[];
 #endif
@@ -56,25 +64,42 @@ void EmptyLinkFunctionForGeneratedCodeSprungWheel() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASprungWheel_Statics::NewProp_AxleWheelConstraint_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "SprungWheel.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASprungWheel_Statics::NewProp_AxleWheelConstraint = { "AxleWheelConstraint", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASprungWheel, AxleWheelConstraint), Z_Construct_UClass_UPhysicsConstraintComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASprungWheel_Statics::NewProp_AxleWheelConstraint_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASprungWheel_Statics::NewProp_AxleWheelConstraint_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASprungWheel_Statics::NewProp_MassWheelConstraint_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "SprungWheel.h" },
-		{ "ToolTip", "UPROPERTY(VisibleAnywhere, Category=\"Components\")\nUStaticMeshComponent* Mass = nullptr;" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASprungWheel_Statics::NewProp_MassWheelConstraint = { "MassWheelConstraint", nullptr, (EPropertyFlags)0x00400000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASprungWheel, MassWheelConstraint), Z_Construct_UClass_UPhysicsConstraintComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASprungWheel_Statics::NewProp_MassWheelConstraint_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASprungWheel_Statics::NewProp_MassWheelConstraint_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASprungWheel_Statics::NewProp_MassWheelConstraint = { "MassWheelConstraint", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASprungWheel, MassWheelConstraint), Z_Construct_UClass_UPhysicsConstraintComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASprungWheel_Statics::NewProp_MassWheelConstraint_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASprungWheel_Statics::NewProp_MassWheelConstraint_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASprungWheel_Statics::NewProp_Axle_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "SprungWheel.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASprungWheel_Statics::NewProp_Axle = { "Axle", nullptr, (EPropertyFlags)0x00200800000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASprungWheel, Axle), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASprungWheel_Statics::NewProp_Axle_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASprungWheel_Statics::NewProp_Axle_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASprungWheel_Statics::NewProp_Wheel_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "SprungWheel.h" },
-		{ "ToolTip", "Components" },
+		{ "ToolTip", "UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=\"Components\")\n       USphereComponent* Wheel = nullptr;\n       UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=\"Components\")\n       USphereComponent* Axle = nullptr;" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASprungWheel_Statics::NewProp_Wheel = { "Wheel", nullptr, (EPropertyFlags)0x00400000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASprungWheel, Wheel), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASprungWheel_Statics::NewProp_Wheel_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASprungWheel_Statics::NewProp_Wheel_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASprungWheel_Statics::NewProp_Wheel = { "Wheel", nullptr, (EPropertyFlags)0x00200800000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASprungWheel, Wheel), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASprungWheel_Statics::NewProp_Wheel_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASprungWheel_Statics::NewProp_Wheel_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASprungWheel_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASprungWheel_Statics::NewProp_AxleWheelConstraint,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASprungWheel_Statics::NewProp_MassWheelConstraint,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASprungWheel_Statics::NewProp_Axle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASprungWheel_Statics::NewProp_Wheel,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASprungWheel_Statics::StaticCppClassTypeInfo = {
@@ -104,7 +129,7 @@ void EmptyLinkFunctionForGeneratedCodeSprungWheel() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASprungWheel, 559521358);
+	IMPLEMENT_CLASS(ASprungWheel, 1350767999);
 	template<> BATTLETANK_API UClass* StaticClass<ASprungWheel>()
 	{
 		return ASprungWheel::StaticClass();

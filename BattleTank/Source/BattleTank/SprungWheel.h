@@ -7,6 +7,7 @@
 #include "SprungWheel.generated.h"
 
 class UPhysicsConstraintComponent;
+class USphereComponent;
 class UStaticMeshComponent;
 
 UCLASS()
@@ -22,14 +23,22 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-private:
+// private:
 	// Components
-	UPROPERTY(VisibleAnywhere, Category="Components")
+	/*UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	USphereComponent* Wheel = nullptr;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	USphereComponent* Axle = nullptr;
+	*/
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
 	UStaticMeshComponent* Wheel = nullptr;
-	// UPROPERTY(VisibleAnywhere, Category="Components")
-	// UStaticMeshComponent* Mass = nullptr;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UStaticMeshComponent* Axle = nullptr;
+	
 	UPROPERTY(VisibleAnywhere, Category="Components")
-	UPhysicsConstraintComponent* MassWheelConstraint = nullptr;
+	UPhysicsConstraintComponent* MassWheelConstraint = nullptr;	
+	UPROPERTY(VisibleAnywhere, Category="Components")
+	UPhysicsConstraintComponent* AxleWheelConstraint = nullptr;
 
 	void SetupConstraint();
 
