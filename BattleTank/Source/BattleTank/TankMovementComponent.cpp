@@ -4,6 +4,12 @@
 #include "TankMovementComponent.h"
 #include "TankTrack.h"
 
+UTankMovementComponent::UTankMovementComponent()
+{
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+}
+
 void UTankMovementComponent::IntendMoveForward(float Throw)
 {
     if (!ensure(LeftTrack && RightTrack)) { return; }

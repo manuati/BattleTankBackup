@@ -28,6 +28,8 @@ public:
 	void IntendTurnRight(float Throw);
 
 private:
+	UTankMovementComponent();
+
 	UTankTrack* LeftTrack = nullptr;
 	UTankTrack* RightTrack = nullptr;
 

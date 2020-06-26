@@ -3,3 +3,5 @@ G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Source\BattleTank\
 G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank\TankPlayerController.generated.h
 G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Source\BattleTank\TankAimingComponent.h
 G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank\TankAimingComponent.generated.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Source\BattleTank\Tank.h
+G:\Udemy\Unreal-gamdev.tv\BattleTank\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank\Tank.generated.h

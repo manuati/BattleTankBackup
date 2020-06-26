@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 	BATTLETANK_API UClass* Z_Construct_UClass_UTankAimingComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankAimingComponent_Fire();
+	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft();
 	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankAimingComponent_Initialise();
 	BATTLETANK_API UClass* Z_Construct_UClass_UTankTurret_NoRegister();
 	BATTLETANK_API UClass* Z_Construct_UClass_UTankBarrel_NoRegister();
@@ -39,7 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 		return EFiringState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EFiringState(EFiringState_StaticEnum, TEXT("/Script/BattleTank"), TEXT("EFiringState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_BattleTank_EFiringState_Hash() { return 1430864847U; }
+	uint32 Get_Z_Construct_UEnum_BattleTank_EFiringState_Hash() { return 3138610285U; }
 	UEnum* Z_Construct_UEnum_BattleTank_EFiringState()
 	{
 #if WITH_HOT_RELOAD
@@ -54,6 +55,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 				{ "EFiringState::Reloading", (int64)EFiringState::Reloading },
 				{ "EFiringState::Aiming", (int64)EFiringState::Aiming },
 				{ "EFiringState::Lock", (int64)EFiringState::Lock },
+				{ "EFiringState::OutOfAmmo", (int64)EFiringState::OutOfAmmo },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -82,6 +84,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 		UClass* Class = UTankAimingComponent::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "Fire", &UTankAimingComponent::execFire },
+			{ "GetRoundsLeft", &UTankAimingComponent::execGetRoundsLeft },
 			{ "Initialise", &UTankAimingComponent::execInitialise },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
@@ -106,6 +109,39 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTankAimingComponent_Fire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics
+	{
+		struct TankAimingComponent_eventGetRoundsLeft_Parms
+		{
+			int32 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TankAimingComponent_eventGetRoundsLeft_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Firing" },
+		{ "ModuleRelativePath", "TankAimingComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTankAimingComponent, nullptr, "GetRoundsLeft", sizeof(TankAimingComponent_eventGetRoundsLeft_Parms), Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -174,6 +210,10 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoundsLeft_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_RoundsLeft;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LaunchSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_LaunchSpeed;
@@ -200,6 +240,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UTankAimingComponent_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UTankAimingComponent_Fire, "Fire" }, // 1824836765
+		{ &Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft, "GetRoundsLeft" }, // 1369866793
 		{ &Z_Construct_UFunction_UTankAimingComponent_Initialise, "Initialise" }, // 2805951387
 	};
 #if WITH_METADATA
@@ -211,6 +252,13 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 		{ "ToolTip", "Holds barrel's properties" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_RoundsLeft_MetaData[] = {
+		{ "Category", "Firing" },
+		{ "ModuleRelativePath", "TankAimingComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_RoundsLeft = { "RoundsLeft", nullptr, (EPropertyFlags)0x0040000000010001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UTankAimingComponent, RoundsLeft), METADATA_PARAMS(Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_RoundsLeft_MetaData, ARRAY_COUNT(Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_RoundsLeft_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_LaunchSpeed_MetaData[] = {
 		{ "Category", "Firing" },
@@ -227,7 +275,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_ProjectileBlueprint = { "ProjectileBlueprint", nullptr, (EPropertyFlags)0x0044000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UTankAimingComponent, ProjectileBlueprint), Z_Construct_UClass_AProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_ProjectileBlueprint_MetaData, ARRAY_COUNT(Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_ProjectileBlueprint_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_ReloadTimeInSeconds_MetaData[] = {
-		{ "Category", "Setup" },
+		{ "Category", "Firing" },
 		{ "ModuleRelativePath", "TankAimingComponent.h" },
 	};
 #endif
@@ -241,6 +289,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_FiringState = { "FiringState", nullptr, (EPropertyFlags)0x0020080000000014, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UTankAimingComponent, FiringState), Z_Construct_UEnum_BattleTank_EFiringState, METADATA_PARAMS(Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_FiringState_MetaData, ARRAY_COUNT(Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_FiringState_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_FiringState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTankAimingComponent_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_RoundsLeft,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_LaunchSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_ProjectileBlueprint,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTankAimingComponent_Statics::NewProp_ReloadTimeInSeconds,
@@ -274,7 +323,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTankAimingComponent, 2237980223);
+	IMPLEMENT_CLASS(UTankAimingComponent, 1451295572);
 	template<> BATTLETANK_API UClass* StaticClass<UTankAimingComponent>()
 	{
 		return UTankAimingComponent::StaticClass();

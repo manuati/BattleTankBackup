@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeTankPlayerController() {}
 	UPackage* Z_Construct_UPackage__Script_BattleTank();
 	BATTLETANK_API UFunction* Z_Construct_UFunction_ATankPlayerController_FoundAimingComponent();
 	BATTLETANK_API UClass* Z_Construct_UClass_UTankAimingComponent_NoRegister();
+	BATTLETANK_API UFunction* Z_Construct_UFunction_ATankPlayerController_OnPossesedTankDeath();
 // End Cross Module References
 	static FName NAME_ATankPlayerController_FoundAimingComponent = FName(TEXT("FoundAimingComponent"));
 	void ATankPlayerController::FoundAimingComponent(UTankAimingComponent* AimCompRef)
@@ -29,6 +30,11 @@ void EmptyLinkFunctionForGeneratedCodeTankPlayerController() {}
 	}
 	void ATankPlayerController::StaticRegisterNativesATankPlayerController()
 	{
+		UClass* Class = ATankPlayerController::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OnPossesedTankDeath", &ATankPlayerController::execOnPossesedTankDeath },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_ATankPlayerController_FoundAimingComponent_Statics
 	{
@@ -67,6 +73,28 @@ void EmptyLinkFunctionForGeneratedCodeTankPlayerController() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ATankPlayerController_OnPossesedTankDeath_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATankPlayerController_OnPossesedTankDeath_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "TankPlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATankPlayerController_OnPossesedTankDeath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATankPlayerController, nullptr, "OnPossesedTankDeath", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATankPlayerController_OnPossesedTankDeath_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_ATankPlayerController_OnPossesedTankDeath_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATankPlayerController_OnPossesedTankDeath()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATankPlayerController_OnPossesedTankDeath_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ATankPlayerController_NoRegister()
 	{
 		return ATankPlayerController::StaticClass();
@@ -100,6 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeTankPlayerController() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATankPlayerController_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ATankPlayerController_FoundAimingComponent, "FoundAimingComponent" }, // 2150378117
+		{ &Z_Construct_UFunction_ATankPlayerController_OnPossesedTankDeath, "OnPossesedTankDeath" }, // 716154944
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATankPlayerController_Statics::Class_MetaDataParams[] = {
@@ -162,7 +191,7 @@ void EmptyLinkFunctionForGeneratedCodeTankPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATankPlayerController, 1109389708);
+	IMPLEMENT_CLASS(ATankPlayerController, 984137212);
 	template<> BATTLETANK_API UClass* StaticClass<ATankPlayerController>()
 	{
 		return ATankPlayerController::StaticClass();
