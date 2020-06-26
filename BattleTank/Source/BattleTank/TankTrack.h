@@ -26,11 +26,12 @@ public:
 	//void Tick(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction);
 
 private:
-	virtual void BeginPlay() override;
-	UFUNCTION()
-	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
+	// virtual void BeginPlay() override;
+	//UFUNCTION()
+	// void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 	void ApplySidewaysForce();
-	void DriveTrack();
+	void DriveTrack(float CurrentThrottle);
+	TArray<class ASprungWheel*> GetWheels() const;
 
-	float CurrentThrottle = 0;
+	// float CurrentThrottle = 0;
 };

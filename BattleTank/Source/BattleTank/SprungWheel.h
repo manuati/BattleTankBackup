@@ -30,9 +30,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
 	USphereComponent* Axle = nullptr;
 	*/
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UPROPERTY(VisibleAnywhere, Category="Components")
 	UStaticMeshComponent* Wheel = nullptr;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UPROPERTY(VisibleAnywhere, Category="Components")
 	UStaticMeshComponent* Axle = nullptr;
 	
 	UPROPERTY(VisibleAnywhere, Category="Components")
@@ -41,10 +41,17 @@ protected:
 	UPhysicsConstraintComponent* AxleWheelConstraint = nullptr;
 
 	void SetupConstraint();
+	
+	UFUNCTION()
+	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitresult& Hit);
+
+	void ApplyForce();
+
+	float TotalForceMagnitudeThisFrame = 0;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	
-
+	void AddDrivingForce(float ForceMagnitude);
 };

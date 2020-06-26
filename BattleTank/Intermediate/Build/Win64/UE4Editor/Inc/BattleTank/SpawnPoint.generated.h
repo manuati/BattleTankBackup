@@ -58,7 +58,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USpawnPoint); \
 
 
 #define BattleTank_Source_BattleTank_SpawnPoint_h_13_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__SpawnClass() { return STRUCT_OFFSET(USpawnPoint, SpawnClass); }
+	FORCEINLINE static uint32 __PPO__SpawnClass() { return STRUCT_OFFSET(USpawnPoint, SpawnClass); } \
+	FORCEINLINE static uint32 __PPO__SpawnedActor() { return STRUCT_OFFSET(USpawnPoint, SpawnedActor); }
 
 
 #define BattleTank_Source_BattleTank_SpawnPoint_h_10_PROLOG
