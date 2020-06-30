@@ -3,6 +3,7 @@ Known issues:
 -Cuando intento settear el blueprint de la bala dentro del blueprint del tanque, si compilo la escena el blueprint del tanque pierde la referencia del blueprint de la bala. Tuve que desactivar el disparo en la clase del tanque enemigo por ésto. Si setteo la bala y solo compilo el blueprint del tanque, funciona bien al correr el juego
 -Cuando las balas tocan el piso, no hay animación de explosión (puede que esten atravezando el piso)
 -El sistema de pesos de las ruedas esta, honestamente, todo roto. Debo admitir que estas lecciones las pasé con la idea de volver a ellas luego de terminar el curso, pero aun no lo he hecho. Seguramente convenga hacerlo de cero
+-Tanque enemigo no se mueve. Seguramente sea un tema de ajustar valores
 
 Ramas a usar:
 
