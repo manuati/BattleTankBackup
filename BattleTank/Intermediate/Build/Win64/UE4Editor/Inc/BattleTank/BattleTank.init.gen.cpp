@@ -25,7 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeBattleTank_init() {}
 				SingletonFuncArray,
 				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x8832B41A,
+				0xB1AB3BB5,
 				0xE0EFBD1C,
 				METADATA_PARAMS(nullptr, 0)
 			};
