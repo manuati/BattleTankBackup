@@ -21,10 +21,10 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankAimingComponent_Fire();
 	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft();
 	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankAimingComponent_Initialise();
-	BATTLETANK_API UClass* Z_Construct_UClass_UTankTurret_NoRegister();
-	BATTLETANK_API UClass* Z_Construct_UClass_UTankBarrel_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	BATTLETANK_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
+	BATTLETANK_API UClass* Z_Construct_UClass_UTankTurret_NoRegister();
+	BATTLETANK_API UClass* Z_Construct_UClass_UTankBarrel_NoRegister();
 // End Cross Module References
 	static UEnum* EFiringState_StaticEnum()
 	{
@@ -151,7 +151,9 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 		{
 			UTankBarrel* BarrelToSet;
 			UTankTurret* TurretToSet;
+			TSubclassOf<AProjectile>  ProjectileBlueprintToSet;
 		};
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ProjectileBlueprintToSet;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TurretToSet_MetaData[];
 #endif
@@ -166,6 +168,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UTankAimingComponent_Initialise_Statics::NewProp_ProjectileBlueprintToSet = { "ProjectileBlueprintToSet", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TankAimingComponent_eventInitialise_Parms, ProjectileBlueprintToSet), Z_Construct_UClass_AProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UTankAimingComponent_Initialise_Statics::NewProp_TurretToSet_MetaData[] = {
 		{ "EditInline", "true" },
@@ -179,6 +182,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTankAimingComponent_Initialise_Statics::NewProp_BarrelToSet = { "BarrelToSet", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TankAimingComponent_eventInitialise_Parms, BarrelToSet), Z_Construct_UClass_UTankBarrel_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_UTankAimingComponent_Initialise_Statics::NewProp_BarrelToSet_MetaData, ARRAY_COUNT(Z_Construct_UFunction_UTankAimingComponent_Initialise_Statics::NewProp_BarrelToSet_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTankAimingComponent_Initialise_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTankAimingComponent_Initialise_Statics::NewProp_ProjectileBlueprintToSet,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTankAimingComponent_Initialise_Statics::NewProp_TurretToSet,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTankAimingComponent_Initialise_Statics::NewProp_BarrelToSet,
 	};
@@ -241,7 +245,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UTankAimingComponent_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UTankAimingComponent_Fire, "Fire" }, // 1824836765
 		{ &Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft, "GetRoundsLeft" }, // 1369866793
-		{ &Z_Construct_UFunction_UTankAimingComponent_Initialise, "Initialise" }, // 2805951387
+		{ &Z_Construct_UFunction_UTankAimingComponent_Initialise, "Initialise" }, // 449257728
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTankAimingComponent_Statics::Class_MetaDataParams[] = {
@@ -323,7 +327,7 @@ void EmptyLinkFunctionForGeneratedCodeTankAimingComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTankAimingComponent, 1451295572);
+	IMPLEMENT_CLASS(UTankAimingComponent, 1627968016);
 	template<> BATTLETANK_API UClass* StaticClass<UTankAimingComponent>()
 	{
 		return UTankAimingComponent::StaticClass();

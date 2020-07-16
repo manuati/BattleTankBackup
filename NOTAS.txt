@@ -1,7 +1,6 @@
 Known issues:
 
--Cuando intento settear el blueprint de la bala dentro del blueprint del tanque, si compilo la escena el blueprint del tanque pierde la referencia del blueprint de la bala. Tuve que desactivar el disparo en la clase del tanque enemigo por ésto. Si setteo la bala y solo compilo el blueprint del tanque, funciona bien al correr el juego
--Cuando las balas tocan el piso, no hay animación de explosión (puede que esten atravezando el piso)
+-Cuando las balas tocan el piso, no hay animación de explosión (puede que esten atravezando el piso). Los logs de errores parecen mostrar que el problema está en la función de OnHit. El error ocurre en el momento del disparo. ¿Es posible que esté tocando la punta del tanque al generarse el objeto?
 -Tanque enemigo no se mueve. Seguramente sea un tema de ajustar valores
 
 Ramas a usar:
@@ -11,3 +10,5 @@ Ramas a usar:
 
 Notas:
 -Solo hay cuatro ruedas por cada lado. Cuando intenté hacerlo con 5 y 6, por alguna razón todos los constraints se salen de control y empiezan a subir arriba y abajo. No pude encontrar aun un porque. Probé jugando con los limites lineales, y lo curioso es que lockeand el eje z, es como si cada constraint de cada rueda vibrase
+
+-Cuando intento settear el blueprint de la bala dentro del blueprint del tanque, mediante el panel de Details, si compilo la escena el blueprint del tanque pierde la referencia del blueprint de la bala. Como solución, volví el blueprint del proyectil uno de los parametros de la función Initialise del TankAimingComponent

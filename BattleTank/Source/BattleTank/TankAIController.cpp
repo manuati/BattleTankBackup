@@ -30,7 +30,7 @@ void ATankAIController::Tick(float DeltaTime)
     // If aim or locked
     if (MyAimingComponent->GetFiringState() == EFiringState::Lock) {
         // MyAimingComponent->Fire(); //TODO Fix fire; se le esta llendo el componente seteado en el blueprint
-        UE_LOG(LogTemp, Warning, TEXT("AI Fire!"));
+        // UE_LOG(LogTemp, Warning, TEXT("AI Fire!"));
     }
 }
 
