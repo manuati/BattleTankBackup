@@ -1,6 +1,5 @@
 Known issues:
 
--Cuando las balas tocan el piso, no hay animación de explosión (puede que esten atravezando el piso). Los logs de errores parecen mostrar que el problema está en la función de OnHit. El error ocurre en el momento del disparo. ¿Es posible que esté tocando la punta del tanque al generarse el objeto?
 -Tanque enemigo no se mueve. Seguramente sea un tema de ajustar valores
 
 Ramas a usar:
