@@ -1,12 +1,3 @@
-Known issues:
-
--Tanque enemigo no se mueve. Seguramente sea un tema de ajustar valores
-
-Ramas a usar:
-
-->master: Tiene todo, incluyendo los ajustes de las ruedas del tanque
-->preFixRuedas: Todo menos los cambios de las ruedas del tanque. Sería la mejor versión para ver como se mueven las cosas
-
 Notas:
 -Solo hay cuatro ruedas por cada lado. Cuando intenté hacerlo con 5 y 6, por alguna razón todos los constraints se salen de control y empiezan a subir arriba y abajo. No pude encontrar aun un porque. Probé jugando con los limites lineales, y lo curioso es que lockeand el eje z, es como si cada constraint de cada rueda vibrase
 

@@ -59,7 +59,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float LaunchSpeed = 4000;
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-	int RoundsLeft = 3;
+	int RoundsLeft = 50;
 
 
 	UTankBarrel* Barrel = nullptr;
