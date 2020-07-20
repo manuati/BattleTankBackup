@@ -16,7 +16,6 @@ void ATankAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
     auto PlayerTank = GetWorld()->GetFirstPlayerController()->GetPawn();
-    UE_LOG(LogTemp, Warning, TEXT("AI: Player position %s"));
     auto MyTank = GetPawn();
     
     if (!(PlayerTank && MyTank)) { 
