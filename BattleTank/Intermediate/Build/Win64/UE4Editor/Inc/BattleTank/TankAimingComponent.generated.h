@@ -10,6 +10,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UTankBarrel;
 class UTankTurret;
+class AProjectile;
 #ifdef BATTLETANK_TankAimingComponent_generated_h
 #error "TankAimingComponent.generated.h already included, missing '#pragma once' in TankAimingComponent.h"
 #endif
@@ -37,9 +38,10 @@ class UTankTurret;
 	{ \
 		P_GET_OBJECT(UTankBarrel,Z_Param_BarrelToSet); \
 		P_GET_OBJECT(UTankTurret,Z_Param_TurretToSet); \
+		P_GET_OBJECT(UClass,Z_Param_ProjectileBlueprintToSet); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->Initialise(Z_Param_BarrelToSet,Z_Param_TurretToSet); \
+		P_THIS->Initialise(Z_Param_BarrelToSet,Z_Param_TurretToSet,Z_Param_ProjectileBlueprintToSet); \
 		P_NATIVE_END; \
 	}
 
@@ -66,9 +68,10 @@ class UTankTurret;
 	{ \
 		P_GET_OBJECT(UTankBarrel,Z_Param_BarrelToSet); \
 		P_GET_OBJECT(UTankTurret,Z_Param_TurretToSet); \
+		P_GET_OBJECT(UClass,Z_Param_ProjectileBlueprintToSet); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->Initialise(Z_Param_BarrelToSet,Z_Param_TurretToSet); \
+		P_THIS->Initialise(Z_Param_BarrelToSet,Z_Param_TurretToSet,Z_Param_ProjectileBlueprintToSet); \
 		P_NATIVE_END; \
 	}
 

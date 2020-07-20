@@ -16,9 +16,13 @@ void ATankAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
     auto PlayerTank = GetWorld()->GetFirstPlayerController()->GetPawn();
+    UE_LOG(LogTemp, Warning, TEXT("AI: Player position %s"));
     auto MyTank = GetPawn();
     
-    if (!PlayerTank && MyTank) { return; }
+    if (!(PlayerTank && MyTank)) { 
+        UE_LOG(LogTemp, Warning, TEXT("AI: Can't find the player"));
+        return; 
+    }
 
     // Move towards the player
     MoveToActor(PlayerTank, AcceptanceRadius); // TODO Check Radius is in centimeters
@@ -29,8 +33,7 @@ void ATankAIController::Tick(float DeltaTime)
     // Fire if ready
     // If aim or locked
     if (MyAimingComponent->GetFiringState() == EFiringState::Lock) {
-        // MyAimingComponent->Fire(); //TODO Fix fire; se le esta llendo el componente seteado en el blueprint
-        UE_LOG(LogTemp, Warning, TEXT("AI Fire!"));
+        MyAimingComponent->Fire();
     }
 }
 
@@ -40,7 +43,7 @@ void ATankAIController::SetPawn(APawn* InPawn)
     if (InPawn)
     {
         auto PossessedTank = Cast<ATank>(InPawn);
-        if (!PossessedTank)
+        if (!ensure(PossessedTank))
         {
             return;
         }

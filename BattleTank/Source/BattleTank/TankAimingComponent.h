@@ -38,7 +38,7 @@ public:
 	void AimAt(FVector HitLocation);
 
 	UFUNCTION(BlueprintCallable, Category = "Setup")
-	void Initialise(UTankBarrel* BarrelToSet, UTankTurret* TurretToSet);
+	void Initialise(UTankBarrel* BarrelToSet, UTankTurret* TurretToSet, TSubclassOf<AProjectile> ProjectileBlueprintToSet);
 
 	UFUNCTION(BlueprintCallable, Category = "TankAction")
 	void Fire();
@@ -59,7 +59,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float LaunchSpeed = 4000;
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-	int RoundsLeft = 3;
+	int RoundsLeft = 50;
 
 
 	UTankBarrel* Barrel = nullptr;

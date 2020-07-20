@@ -2,7 +2,7 @@
 
 
 #include "SpawnPoint.h"
-#include "Kismet/GameplayStatics.h"
+#include <Runtime\Engine\Classes\Kismet\GameplayStatics.h>
 
 // Sets default values for this component's properties
 USpawnPoint::USpawnPoint()
@@ -20,7 +20,9 @@ void USpawnPoint::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// ...
 	SpawnedActor = GetWorld()->SpawnActorDeferred<AActor>(SpawnClass, GetComponentTransform());
+	UE_LOG(LogTemp, Warning, TEXT("Spawned the thing"));
 	if (!SpawnedActor) return;
 	SpawnedActor->AttachToComponent(this, FAttachmentTransformRules::KeepWorldTransform);
 	UGameplayStatics::FinishSpawningActor(SpawnedActor, GetComponentTransform());
@@ -31,7 +33,5 @@ void USpawnPoint::BeginPlay()
 void USpawnPoint::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
 }
 
