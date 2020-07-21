@@ -1,4 +1,5 @@
 Notas:
--Solo hay cuatro ruedas por cada lado. Cuando intenté hacerlo con 5 y 6, por alguna razón todos los constraints se salen de control y empiezan a subir arriba y abajo. No pude encontrar aun un porque. Probé jugando con los limites lineales, y lo curioso es que lockeand el eje z, es como si cada constraint de cada rueda vibrase
 
+-Solo hay cuatro ruedas por cada lado. Cuando intenté hacerlo con 5 y 6, por alguna razón todos los constraints se salen de control y empiezan a subir arriba y abajo. No pude encontrar aun un porque. Probé jugando con los limites lineales, y lo curioso es que lockeand el eje z, es como si cada constraint de cada rueda vibrase
 -Cuando intento settear el blueprint de la bala dentro del blueprint del tanque, mediante el panel de Details, si compilo la escena el blueprint del tanque pierde la referencia del blueprint de la bala. Como solución, volví el blueprint del proyectil uno de los parametros de la función Initialise del TankAimingComponent
+-Cuando se muere el jugador, a veces crashea el juego

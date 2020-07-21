@@ -68,7 +68,6 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USpawnPoint_Statics::NewProp_SpawnClass_MetaData[] = {
 		{ "Category", "Setup" },
 		{ "ModuleRelativePath", "SpawnPoint.h" },
-		{ "ToolTip", "Config" },
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_USpawnPoint_Statics::NewProp_SpawnClass = { "SpawnClass", nullptr, (EPropertyFlags)0x0044000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USpawnPoint, SpawnClass), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_USpawnPoint_Statics::NewProp_SpawnClass_MetaData, ARRAY_COUNT(Z_Construct_UClass_USpawnPoint_Statics::NewProp_SpawnClass_MetaData)) };
@@ -103,7 +102,7 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USpawnPoint, 1736391304);
+	IMPLEMENT_CLASS(USpawnPoint, 2653633671);
 	template<> BATTLETANK_API UClass* StaticClass<USpawnPoint>()
 	{
 		return USpawnPoint::StaticClass();
